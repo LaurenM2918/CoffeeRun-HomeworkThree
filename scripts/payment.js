@@ -5,15 +5,15 @@
     var FormHandler = App.FormHandler;
     var paymentHandler = new FormHandler(PAYMENT_SELECTOR);
 
-    paymentHandler.addSubmitHandler(function (data){
+    paymentHandler.addSubmitHandler(function (data) {
         var dialog_box = document.querySelector('[Payment-message = "response"]');
         console.log(dialog_box.textContent);
-        dialog_box.textContent = "Thank you for your payment, " +  data.title + " " + data.username;
+        dialog_box.textContent = "Thank you for your payment, " + data.title + " " + data.username;
         console.log(dialog_box.textContent);
 
         $('#pop-up').modal({
             show: 'true'
-        }); 
+        });
     });
 
     console.log(paymentHandler);
